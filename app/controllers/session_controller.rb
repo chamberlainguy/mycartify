@@ -9,8 +9,7 @@ class SessionController < ApplicationController
       session[:buyer_id] = buyer.id
       redirect_to root_path
     else
-      @login_msg = "Incorrect Email or Password"
-      redirect_to login_path
+      redirect_to login_path, notice: 'Incorrect Email or Password.'
     end
   end
 
