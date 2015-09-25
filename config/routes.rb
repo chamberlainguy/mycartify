@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  post '/addtocart/:id' => 'products#addtocart' , as: :addtocart
+
 end

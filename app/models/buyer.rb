@@ -20,7 +20,9 @@ class Buyer < ActiveRecord::Base
 
 	has_secure_password
 	
-	belongs_to :cart
+	has_many :carts
+
+    has_many :lineitems, :through => :carts
 
   	validates :name, :presence => true, :uniqueness => true, :length => { :minimum => 3 }
 	validates :email, :presence => true, :uniqueness => true

@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :addtocart, :edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
@@ -10,6 +10,26 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+  end
+
+  def addtocart
+    if @current_buyer.present?
+      cart = @current_buyer.carts[0]
+      if cart.nil?
+        # Create a cart if this buyer doesn't yet have one
+        cart = Cart.new  
+        cart.buyer = @current_buyer
+        cart.save
+      end  
+      li = Lineitem.new  
+      li.cart = cart
+      li.product = @product
+      li.quantity = 1
+      li.save
+      redirect_to @product, notice: 'Item added to cart'
+    else  
+      redirect_to @product, notice: 'First login then you can add to cart.'
+    end  
   end
 
   # GET /products/new
@@ -71,4 +91,5 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :price, :list_price, :image, :available, :quantity, :postage, :category_id)
     end
+
 end

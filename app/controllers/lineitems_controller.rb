@@ -5,6 +5,10 @@ class LineitemsController < ApplicationController
   # GET /lineitems.json
   def index
     @lineitems = Lineitem.all
+    # Get line itemsf or the current loggedin buyer
+    if @current_buyer.present?
+        @lineitems = @current_buyer.lineitems
+    end
   end
 
   # GET /lineitems/1
