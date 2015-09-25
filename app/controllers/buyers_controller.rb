@@ -28,6 +28,9 @@ class BuyersController < ApplicationController
 
     respond_to do |format|
       if @buyer.save
+        # Login this newly created Buyer
+        session[:buyer_id] = @buyer.id
+
         format.html { redirect_to @buyer, notice: 'Buyer was successfully created.' }
         format.json { render :show, status: :created, location: @buyer }
       else

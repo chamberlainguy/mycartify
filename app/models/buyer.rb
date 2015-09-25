@@ -18,6 +18,16 @@
 
 class Buyer < ActiveRecord::Base
 
+	has_secure_password
+	
 	belongs_to :cart
 
+  	validates :name, :presence => true, :uniqueness => true, :length => { :minimum => 3 }
+	validates :email, :presence => true, :uniqueness => true
+	validates :address, :presence => true
+	validates :city, :presence => true
+	validates :state, :presence => true
+	validates :post_code, :presence => true
+	validates :country, :presence => true
 end
+
