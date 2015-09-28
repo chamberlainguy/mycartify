@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :products
   resources :buyers
+  resources :charges
   
   get '/login' => 'session#new'
   post '/login' => 'session#create'
