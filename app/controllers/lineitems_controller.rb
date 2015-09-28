@@ -4,7 +4,7 @@ class LineitemsController < ApplicationController
   # GET /lineitems
   # GET /lineitems.json
   def index
-    @lineitems = Lineitem.all
+    @lineitems = Lineitem.all.order(:id)
     # Get line itemsf or the current loggedin buyer
     if @current_buyer.present?
         @lineitems = @current_buyer.lineitems
@@ -46,8 +46,8 @@ class LineitemsController < ApplicationController
   def update
     respond_to do |format|
       if @lineitem.update(lineitem_params)
-        format.html { redirect_to @lineitem, notice: 'Lineitem was successfully updated.' }
-        format.json { render :show, status: :ok, location: @lineitem }
+        format.html { redirect_to lineitems_url, notice: 'Lineitem was successfully updated.' }
+        format.json { head :no_content }
       else
         format.html { render :edit }
         format.json { render json: @lineitem.errors, status: :unprocessable_entity }
