@@ -13,7 +13,7 @@
     <% if @current_buyer.present? %>
        <%= link_to "Edit my profile", edit_buyer_path(@current_buyer) %> |
        <%= link_to "Show My Cart", lineitems_path %> |
-       <%= link_to "Logout " + @current_buyer.name, login_path, :method => 'delete', :data => { :confirm => 'Are you sure you wish to logout?' } %>
+       <%= link_to "Logout (#{ @current_buyer.name })", login_path, :method => 'delete', :data => { :confirm => 'Are you sure you wish to logout?' } %>
     <% else %>
        <%= link_to 'Create Account', new_buyer_path %> |
        <%= link_to 'Login', login_path %> 

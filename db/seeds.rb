@@ -11,20 +11,101 @@ Category.destroy_all
 c1 = Category.create name: 'Toys'
 c2 = Category.create name: 'Clothing'
 c3 = Category.create name: 'Guns'
-c4 = Category.create name: 'Things for your Pug'
+c4 = Category.create name: 'Games'
+c5 = Category.create name: 'Things for your Pug'
 
+# SPACED OUT FOR READABILTY WHILST PROJECT BEING WORKED ON
 Product.destroy_all
-p1 = Product.create name: 'Lego Ningago', description: 'A really good example of ningago ',price: 10.95, list_price: 12.95, image: 'http://res.cloudinary.com/dmsp719b6/image/upload/v1443139195/ningago1_hiyok2.png', available: true, quantity: 98, postage: 2.95
-p2 = Product.create name: 'Lego City', description: 'Some fantastic city lego at a bargain price',price: 7.95, list_price: 11.95, image: 'http://res.cloudinary.com/dmsp719b6/image/upload/v1443141668/legocity_rnw5ep.jpg', available: true, quantity: 192, postage: 2.95
-p3 = Product.create name: 'MP-5K-PDW', description: 'Kick some brass with this fine Swiss crafted highly concealable mini 9mm submachine gun',price: 1227.95, list_price: 1411.95, image: 'http://res.cloudinary.com/dmsp719b6/image/upload/v1443183209/pdw_cdug3z.jpg', available: true, quantity: 91, postage: 112.95
+p1 = Product.create name: 'Lego Ningago',
+										description: 'A really good example of ningago',
+										price: 10.95,
+										list_price: 12.95,
+										image: 'http://res.cloudinary.com/dmsp719b6/image/upload/v1443139195/ningago1_hiyok2.png',
+										available: true,
+										quantity: 98,
+										postage: 2.95
+p2 = Product.create name: 'Lego City',
+										description: 'Some fantastic city lego at a bargain price',
+										price: 7.95,
+										list_price: 11.95,
+										image: 'http://res.cloudinary.com/dmsp719b6/image/upload/v1443141668/legocity_rnw5ep.jpg',
+										available: true,
+										quantity: 192,
+										postage: 2.95
+p3 = Product.create name: 'MP-5K-PDW', 
+										description: 'Kick some brass with this fine Swiss crafted highly concealable mini 9mm submachine gun', 
+										price: 1227.95, 
+										list_price: 1411.95, 
+										image: 'http://res.cloudinary.com/dmsp719b6/image/upload/v1443183209/pdw_cdug3z.jpg', 
+										available: true, 
+										quantity: 91, 
+										postage: 112.95
+p4 = Product.create name: 'Glock .30', 
+										description: 'Small, compact, the one. When your mates have to ask "Do they make them for men?"', 
+										price: 725.95, 
+										list_price: 1227.95, 
+										image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRdt88iN2MKNq9OJM-mm4zueWdbj0y0TMHX7nz-ugkYt7P2c4wY8Q', 
+										available: true, 
+										quantity: 151, 
+										postage: 112.95
+p5 = Product.create name: 'Ted', 
+										description: '*insert adult censory here*', 
+										price: 79.95, 
+										ist_price: 99.95, 
+										image: 'http://i.ebayimg.com/00/s/ODAwWDgwMA==/z/EZYAAOSwBLlVS38J/$_57.JPG', 
+										available: true, 
+										uantity: 1, 
+										postage: 24.95
+p6 = Product.create name: 'PlayStation 4', 
+										description: 'Be, superior to king of the world...', 
+										price: 199.95, 
+										list_price: 399.95, 
+										image: 'http://assets.console-deals.com/images/content/ps4-console.png', 
+										available: true, 
+										quantity: 755, 
+										postage: 112.95
+p7 = Product.create name: 'Alienware M17x R3',
+										description: 'When on le move',
+										price: 499.95,
+										list_price: 1899.95,
+										image: 'http://www.techomag.com/wp-content/uploads/2011/10/alienware2.jpg',
+										available: true,
+										quantity: 22,
+										postage: 112.95
 
 c1.products << p1 << p2
-c3.products << p3
+c2.products << p5
+c3.products << p3 << p4
+c4.products << p6 << p7
 
 Buyer.destroy_all
-b1 = Buyer.create name: 'Guy McFly', email: 'guy@gmail.com', password: 'chicken', address: '56 york st', suburb: 'Surry Hills', city: 'Sydney', state: 'NSW', post_code: '2001', country: 'Australia'
-b2 = Buyer.create name: 'Big Tony', email: 'tony@gmail.com', password: 'chicken', address: '56 york st', suburb: 'Surry Hills', city: 'Sydney', state: 'NSW', post_code: '2001', country: 'Australia'
-b3 = Buyer.create name: 'Kylie', email: 'kylie@gmail.com', password: 'chicken', address: '56 york st', suburb: 'Surry Hills', city: 'Sydney', state: 'NSW', post_code: '2001', country: 'Australia'
+b1 = Buyer.create name: 'Guy McFly',
+									email: 'guy@gmail.com',
+									password: 'chicken',
+									address: '56 york st',
+									suburb: 'Surry Hills',
+									city: 'Sydney',
+									state: 'NSW',
+									post_code: '2001',
+									country: 'Australia'
+b2 = Buyer.create name: 'T-Dizzle',
+									email: 'tony@gmail.com',
+									password: 'chicken',
+									address: '56 york st',
+									suburb: 'Surry Hills',
+									city: 'Sydney',
+									state: 'NSW',
+									post_code: '3000',
+									country: 'Australia'
+b3 = Buyer.create name: 'Kylie',
+									email: 'kylie@gmail.com',
+									password: 'chicken',
+									address: '56 york st',
+									suburb: 'Surry Hills',
+									city: 'Sydney',
+									state: 'NSW',
+									post_code: '2001',
+									country: 'Australia'
 
 Cart.destroy_all
 
