@@ -4,7 +4,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:cat_id].present?
+      # Read by this category id
+      cat = Category.find(params[:cat_id])
+      @products = cat.products
+      @search_desc = "Showing all " + cat.name
+    else
+      @products = Product.all
+      @search_desc = "Showing all products"
+    end
   end
 
   # GET /products/1
