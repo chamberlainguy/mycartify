@@ -26,6 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass'	#Bootsrap
 
+gem 'simple_form'	# Simple form-er
+
 gem 'rails-backbone'	# Backbone
 
 gem 'stripe'		# Stripe (payment system) gem

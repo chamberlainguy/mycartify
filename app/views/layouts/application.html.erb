@@ -9,18 +9,42 @@
 </head>
 <body>
 
-    <%= link_to 'Home', '/'%> |
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">myCartify</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <% if @current_buyer.present? %>
+          <li><%= link_to 'Edit My Profile', edit_buyer_path(@current_buyer) %></li>
+          <li><%= link_to 'Show My Cart', lineitems_path %></li>
+          <li><%= link_to "Logout (#{ @current_buyer.name })", login_path, :method => 'delete', :data => { :confirm => 'Are you sure you wish to logout?' } %></li>
+        <% else %>
+          <li><%= link_to 'Create Account', new_buyer_path %></li>
+          <li><%= link_to 'Login', login_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <% if @current_buyer.present? %>
-       <%= link_to "Edit my profile", edit_buyer_path(@current_buyer) %> |
-       <%= link_to "Show My Cart", lineitems_path %> |
-       <%= link_to "Logout (#{ @current_buyer.name })", login_path, :method => 'delete', :data => { :confirm => 'Are you sure you wish to logout?' } %>
-    <% else %>
-       <%= link_to 'Create Account', new_buyer_path %> |
-       <%= link_to 'Login', login_path %> 
-    <% end %>
-      
-<%= yield %>
+<!-- EDIT LATER -->
+<div class="container">
+  <div class="starter-template">
+    <h1>Bootstrap header starter jumbotroner templater</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Itaque, distinctio reiciendis, amet illum facilis provident, neque, eveniet pariatur rerum quaerat minus ipsum. Laborum dolore sed nesciunt iste, temporibus facere quaerat.</p>
+  </div>
+</div><!-- /.container -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
