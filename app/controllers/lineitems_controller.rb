@@ -7,7 +7,7 @@ class LineitemsController < ApplicationController
     @lineitems = Lineitem.all.order(:id)
     # Get line itemsf or the current loggedin buyer
     if @current_buyer.present?
-        @lineitems = @current_buyer.lineitems
+        @lineitems = @current_buyer.lineitems.order(:id)
         # Calculate @cart_total_items 
         # Calculate @cart_total_amount
         @cart_total_items = 0  
