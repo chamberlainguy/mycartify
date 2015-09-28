@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Lineitems</h1>
+<h1>Cart Contents</h1>
 
 <table>
   <thead>
@@ -25,5 +25,25 @@
   </tbody>
 </table>
 
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+Cart Total Items  :<%= @current_buyer.cart_total_items %>
+Cart Total Amount :<%= @current_buyer.cart_total_amount %>
+
+
 <br>
+
+<td><%= button_to 'Pay Now', new_charge_path, method: :get %></td>
+
+
+
+
+
+
+
+
 

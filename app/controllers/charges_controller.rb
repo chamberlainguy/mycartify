@@ -16,8 +16,10 @@ def create
 		:customer 		=> customer.id,
 		:amount 			=> @amount,
 		:description	=> 'Rails Stripe Customer',
-		:currency			=> 'usd'
+		:currency			=> 'aud'
 	)
+
+	@current_buyer.carts.destroy_all
 
 rescue Stripe::CardError => e
 	flash[:error] = e.message
