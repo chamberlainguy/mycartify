@@ -19,7 +19,7 @@ def create
 		:currency			=> 'aud'
 	)
 
-	@current_buyer.carts.destroy_all
+	@current_buyer.cart.destroy
 
 rescue Stripe::CardError => e
 	flash[:error] = e.message

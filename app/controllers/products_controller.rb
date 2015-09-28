@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
   def addtocart
     if @current_buyer.present?
-      cart = @current_buyer.carts[0]
+      cart = @current_buyer.cart
       if cart.nil?
         # Create a cart if this buyer doesn't yet have one
         cart = Cart.new  
