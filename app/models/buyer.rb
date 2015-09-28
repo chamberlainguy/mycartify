@@ -31,5 +31,26 @@ class Buyer < ActiveRecord::Base
 	validates :state, :presence => true
 	validates :post_code, :presence => true
 	validates :country, :presence => true
-end
+
+	def cart_total_items
+		total = 0
+		if lineitems.present?
+			lineitems.each do |li|
+				total += li.quantity 
+			end	
+		end
+		return total
+	end
+
+	def cart_total_amount
+		total = 0
+		if lineitems.present?
+			lineitems.each do |li|
+				total += li.product.price * li.quantity
+			end
+		end
+		return total
+	end	
+
+end	
 

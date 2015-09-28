@@ -3,7 +3,6 @@
 <head>
   <title>Mycartify</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -19,7 +18,7 @@
         <li class="<%= active_class(root_path) %>"><a href="/">Home</a></li>
         <% if @current_buyer.present? %>
           <li class="<%= active_class(edit_buyer_path(@current_buyer)) %>"><%= link_to 'Edit My Profile', edit_buyer_path(@current_buyer) %></li>
-          <li class="<%= active_class(lineitems_path) %>"><%= link_to 'Show My Cart', lineitems_path %></li>
+          <li class="<%= active_class(lineitems_path) %>"><%= link_to 'Show My Cart (' + @current_buyer.cart_total_items.to_s + ') items', lineitems_path %></li>
           <li><%= link_to "Logout (#{ @current_buyer.name })", login_path, :method => 'delete', :data => { :confirm => 'Are you sure you wish to logout?' } %></li>
         <% else %>
           <li class="<%= active_class(new_buyer_path) %>"><%= link_to 'Create Account', new_buyer_path %></li>

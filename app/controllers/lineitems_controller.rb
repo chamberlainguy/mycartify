@@ -8,6 +8,14 @@ class LineitemsController < ApplicationController
     # Get line itemsf or the current loggedin buyer
     if @current_buyer.present?
         @lineitems = @current_buyer.lineitems
+        # Calculate @cart_total_items 
+        # Calculate @cart_total_amount
+        @cart_total_items = 0  
+        @cart_total_amount = 0
+        @lineitems.each do |li|
+          @cart_total_items += li.quantity
+          @cart_total_amount += li.product.price
+        end
     end
   end
 
@@ -32,7 +40,7 @@ class LineitemsController < ApplicationController
 
     respond_to do |format|
       if @lineitem.save
-        format.html { redirect_to @lineitem, notice: 'Lineitem was successfully created.' }
+        format.html { redirect_to @lineitem, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @lineitem }
       else
         format.html { render :new }
@@ -46,7 +54,7 @@ class LineitemsController < ApplicationController
   def update
     respond_to do |format|
       if @lineitem.update(lineitem_params)
-        format.html { redirect_to lineitems_url, notice: 'Lineitem was successfully updated.' }
+        format.html { redirect_to lineitems_url, notice: 'Item was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render :edit }
@@ -60,7 +68,7 @@ class LineitemsController < ApplicationController
   def destroy
     @lineitem.destroy
     respond_to do |format|
-      format.html { redirect_to lineitems_url, notice: 'Lineitem was successfully destroyed.' }
+      format.html { redirect_to lineitems_url, notice: 'Item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
