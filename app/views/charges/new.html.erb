@@ -1,7 +1,7 @@
 <%= form_tag charges_path do %>
   <article>
     <label class="amount">
-      <p>Amount to pay: $<%= @current_buyer.cart_total_amount %>AUD</p>
+      <p>Amount to pay: <%= number_to_currency(@current_buyer.cart_total_amount) %> AUD</p>
     </label>
   </article>
 
