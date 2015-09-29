@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :alsoboughts
   root :to => 'products#index'
-
+  
+  resources :alsoboughts
   resources :lineitems
   resources :carts
   resources :categories

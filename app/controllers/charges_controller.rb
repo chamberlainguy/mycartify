@@ -22,6 +22,17 @@ def create
 	# 	:currency			=> 'AUD'
 	# )
 
+	# Record the Also Boughts eg. He who bought A also bought B
+	@current_buyer.lineitems.each do |i|
+		p1 = i.product
+		@current_buyer.lineitems.each do |j|
+			p2 = j.product
+			unless p1 == p2
+				Alsobought.create product: p1, alsogot: p2	
+			end	
+		end
+	end	
+
 	# Now we must get rid of the cart since the payement is done
 	@current_buyer.cart.destroy
 
