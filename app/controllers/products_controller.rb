@@ -13,7 +13,9 @@ class ProductsController < ApplicationController
       # Read based on the search param
       s = '%' + params[:search] + "%"
       @products = Product.where('lower(name) LIKE ?', s.downcase).all
-      # Also search for the category name
+      # Also search through descriptions
+      @products += Product.where('lower(description) LIKE ?', s.downcase).all
+      # Also search the categories for a matching name
       cats = Category.where('lower(name) LIKE ?', s.downcase).all
       cats.each do |cat|
          @products += cat.products
