@@ -17,6 +17,41 @@ body {
   padding-top: 50px;
 }
 
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin: 10px 0px 2px 0px;
+  font-weight: bold;
+}
+
+// Button on edit pagee! (Actual file too hard to locate)
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  margin: 20px 0px 18px 0px;
+}
+
+.jumbotron {
+  margin: 1px 0px 15px 0px;
+  text-align: center;
+  background-image: url(http://res.cloudinary.com/dxbuftuta/image/upload/c_scale,w_1200/v1443498611/jumbotronbackground_y0wrfv.jpg);
+  background-position: 130px 1px;
+  color: white;
+  text-shadow: black 0.6em 0.6em 0.6em;
+  padding: 30px 0px 330px 0px;
+}
+
+.jumbotron p {
+  padding: 20px 0px 0px 0px;
+  font-size: 21px;
+  font-weight: 400;
+  text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.lead {
+  text-shadow: black 0.6em 0.6em 0.6em;
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -27,13 +62,10 @@ body {
 	margin-top: -16px;
 }
 
-.product-tile {
+#product-tile {
 	display: inline-block;
-    width: 30%;
-    margin: 10px;
-    padding: 5px;
-    border: 1px solid grey; 
+  width: 33%;
+  margin: 10px 1.9px 20px 2px;
+  padding: 5px;
+  border: 1px solid grey; 
 }
-
-
-
