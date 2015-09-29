@@ -9,7 +9,17 @@ class ProductsController < ApplicationController
       cat = Category.find(params[:cat_id])
       @products = cat.products
       @search_desc = "Showing all " + cat.name
-    else
+    elsif params[:search].present? 
+      # Read based on the search param
+      s = '%' + params[:search] + "%"
+      @products = Product.where('lower(name) LIKE ?', s.downcase).all
+      # Also search for the category name
+      cats = Category.where('lower(name) LIKE ?', s.downcase).all
+      cats.each do |cat|
+         @products += cat.products
+      end  
+      @search_desc = "Search results"
+    else 
       @products = Product.all
       @search_desc = "Showing all products"
     end
@@ -18,6 +28,9 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+  end
+
+  def search
   end
 
   def addtocart
