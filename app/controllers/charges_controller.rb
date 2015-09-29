@@ -27,8 +27,12 @@ def create
 		p1 = i.product
 		@current_buyer.lineitems.each do |j|
 			p2 = j.product
-			unless p1 == p2
-				Alsobought.create product: p1, alsogot: p2	
+			unless p1 == p2	
+				# Check if we already have an 'alsobought' recorded
+				ab = Alsobought.where(product: p1.id, alsogot: p2.id )
+    			if ab.empty?
+					Alsobought.create product: p1, alsogot: p2
+				end	
 			end	
 		end
 	end	

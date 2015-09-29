@@ -28,7 +28,7 @@
 
         <% if @current_buyer.present? %>
           <li class="<%= active_class(edit_buyer_path(@current_buyer)) %>"><%= link_to 'Edit My Profile', edit_buyer_path(@current_buyer) %></li>
-          <li class="<%= active_class(lineitems_path) %>"><%= link_to "My Cart (#{ @current_buyer.cart_total_items.to_s })", lineitems_path %></li>
+          <li class="<%= active_class(lineitems_path) %>"><%= link_to "My Cart (#{ pluralize(@current_buyer.cart_total_items,'Item')})", lineitems_path %></li>
           <li><%= link_to "Logout (#{ @current_buyer.name })", login_path, :method => 'delete', :data => { :confirm => 'Are you sure you wish to logout?' } %></li>
         <% else %>
           <li class="<%= active_class(new_buyer_path) %>"><%= link_to 'Register', new_buyer_path %></li>
