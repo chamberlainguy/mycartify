@@ -51,5 +51,21 @@
 
 <!-- <%= link_to 'Edit', edit_product_path(@product) %> -->
 
+<% if @product.linked_to.present? %>
+  <h2>Customers who bought <%= @product.name %> also bought:</h2>
+<% end %>
+
+<% @product.linked_to.each do |product| %>
+      <div class="product-tile"
+        <p><%= link_to product.name, product %></p>
+        <p><%= image_tag product.image, width: "130" %></p>
+        <p>Qty Available:<%= number_with_delimiter(product.quantity) %></p>
+        <p>Sale Price:<%= number_to_currency(product.price) %></p>
+        <p><strike>List Price:<%= number_to_currency(product.list_price) %></strike></p>
+        <p>Postage:<%= number_to_currency(product.postage) %></p>
+        <p>Category:<%= product.category.name %></p>
+      </div>
+<% end %>
+
 
 <%= link_to 'Back', products_path %>

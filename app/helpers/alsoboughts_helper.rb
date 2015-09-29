@@ -1,0 +1,2 @@
+module AlsoboughtsHelper
+end

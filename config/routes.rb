@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :alsoboughts
   root :to => 'products#index'
 
   resources :lineitems

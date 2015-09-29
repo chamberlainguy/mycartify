@@ -111,6 +111,34 @@ c3.products << p3 << p4
 c4.products << p6 << p7
 c5.products << p8 << p9 << p10 << p11
 
+Alsobought.destroy_all
+ab1 = Alsobought.create product: p1, alsogot: p2
+ab2 = Alsobought.create product: p2, alsogot: p1 
+
+ab3 = Alsobought.create product: p3, alsogot: p4
+ab4 = Alsobought.create product: p4, alsogot: p3 
+
+ab5 = Alsobought.create product: p6, alsogot: p7
+ab6 = Alsobought.create product: p7, alsogot: p6 
+
+ab7 = Alsobought.create product: p8, alsogot: p9 
+ab8 = Alsobought.create product: p8, alsogot: p10 
+ab9 = Alsobought.create product: p8, alsogot: p11
+
+ab10 = Alsobought.create product: p9, alsogot: p8
+ab11 = Alsobought.create product: p9, alsogot: p10 
+ab12 = Alsobought.create product: p9, alsogot: p11
+
+ab13 = Alsobought.create product: p10, alsogot: p8 
+ab14 = Alsobought.create product: p10, alsogot: p9 
+ab15 = Alsobought.create product: p10, alsogot: p11 
+
+ab16 = Alsobought.create product: p11, alsogot: p4
+ab17 = Alsobought.create product: p11, alsogot: p8 
+ab18 = Alsobought.create product: p11, alsogot: p9 
+ab19 = Alsobought.create product: p11, alsogot: p10 
+
+
 Buyer.destroy_all
 b1 = Buyer.create name: 'Guy McFly',
 									email: 'guy@gmail.com',
