@@ -22,6 +22,7 @@ def create
 	# 	:currency			=> 'AUD'
 	# )
 
+	# Now we must get rid of the cart since the payement is done
 	@current_buyer.cart.destroy
 
 rescue Stripe::CardError => e
