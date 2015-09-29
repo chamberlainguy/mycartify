@@ -52,6 +52,10 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   text-shadow: black 0.6em 0.6em 0.6em;
 }
 
+.heading {
+  padding: 14px 0px 16px 18px;
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -64,8 +68,9 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 #product-tile {
 	display: inline-block;
+  height: 335px;
   width: 33%;
-  margin: 10px 1.9px 20px 2px;
-  padding: 5px;
-  border: 1px solid grey; 
+  margin: 10px 1.9px -7px 2px;
+  padding: 10px 0px 0px 10px;
+  background-color: whitesmoke;
 }
