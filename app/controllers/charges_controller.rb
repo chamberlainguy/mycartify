@@ -4,22 +4,26 @@ def new
 end
 
 def create
+
+	# The following code is not really required in test
+
 	# Amount in cents
-	@amount = 500
+	# @amount = @current_buyer.cart_total_amount * 100   # convert to cents
 
-	customer = Stripe::Customer.create(
-		:email => 'example@stripe.com',
-		:card	 =>	params[:stripeToken]
-	)
+	# customer = Stripe::Customer.create(
+	# 	:email => @current_buyer.email,
+	# 	:card	 =>	params[:stripeToken]
+	# )
 
-	charge = Stripe::Charge.create(
-		:customer 		=> customer.id,
-		:amount 			=> @amount,
-		:description	=> 'Rails Stripe Customer',
-		:currency			=> 'aud'
-	)
+	# charge = Stripe::Charge.create(
+	# 	:customer 		=> @current_buyer.id,
+	# 	:amount 			=> @amount,
+	# 	:description	=> 'Rails Stripe Customer',
+	# 	:currency			=> 'AUD'
+	# )
 
-	@current_buyer.carts.destroy_all
+	# Now we must get rid of the cart since the payement is done
+	@current_buyer.cart.destroy
 
 rescue Stripe::CardError => e
 	flash[:error] = e.message

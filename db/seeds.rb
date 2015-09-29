@@ -72,11 +72,44 @@ p7 = Product.create name: 'Alienware M17x R3',
 										available: true,
 										quantity: 22,
 										postage: 112.95
+p8 = Product.create name: 'Ballerina Outfit',
+										description: 'For when your pug just gotta dance',
+										price: 49.95,
+										list_price: 189.95,
+										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug3-600x600.jpg',
+										available: true,
+										quantity: 221,
+										postage: 12.95
+p9 = Product.create name: 'Overalls',
+										description: 'For when your pug just gotta look casual',
+										price: 4.95,
+										list_price: 18.95,
+										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug1-600x800.jpg',
+										available: true,
+										quantity: 22,
+										postage: 1.95
+p10 = Product.create name: 'Tuxedo',
+										description: 'For when your pug gotta go to a wedding',
+										price: 4.95,
+										list_price: 18.95,
+										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug2-600x599.jpg',
+										available: true,
+										quantity: 22,
+										postage: 1.95
+p11 = Product.create name: 'Pirate outfit',
+										description: 'For your pirate pug',
+										price: 4.95,
+										list_price: 18.95,
+										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug5-600x851.jpg',
+										available: true,
+										quantity: 22,
+										postage: 1.95
 
 c1.products << p1 << p2
 c2.products << p5
 c3.products << p3 << p4
 c4.products << p6 << p7
+c5.products << p8 << p9 << p10 << p11
 
 Buyer.destroy_all
 b1 = Buyer.create name: 'Guy McFly',

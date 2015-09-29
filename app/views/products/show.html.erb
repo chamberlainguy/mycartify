@@ -12,12 +12,12 @@
 
 <p>
   <strong>Sale Price:</strong>
-  <%= @product.price %>
+  <%= number_to_currency(@product.price) %>
 </p>
 
 <p>
   <strong>List price:</strong>
-  <%= @product.list_price %>
+  <%= number_to_currency(@product.list_price) %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Quantity Available:</strong>
-  <%= @product.quantity %>
+  <%= number_with_delimiter(@product.quantity) %>
 </p>
 
 <p>
