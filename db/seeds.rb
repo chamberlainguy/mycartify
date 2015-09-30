@@ -104,12 +104,117 @@ p11 = Product.create name: 'Pirate outfit',
 										available: true,
 										quantity: 22,
 										postage: 1.95
+p12 = Product.create name: 'Tote',
+										description: 'Pug tote for pug lovers',
+										price: 3.95,
+										list_price: 9.95,
+										image: 'http://productshots1.modcloth.net/productshots/0153/5977/fc8d7a9177907e3e6426d206a91fd00a.jpg?1426794503',
+										available: true,
+										quantity: 22,
+										postage: 1.95
+p13 = Product.create name: 'Wigs',
+										description: 'Pug wig set of 3',
+										price: 8.95,
+										list_price: 19.95,
+										image: 'http://yostatus.com/wp-content/uploads/2013/10/PugWigGang.jpg',
+										available: true,
+										quantity: 22,
+										postage: 1.95		
+p14 = Product.create name: 'Hipster glasses',
+										description: 'Hipster glasses',
+										price: 5.95,
+										list_price: 29.95,
+										image: 'https://s-media-cache-ak0.pinimg.com/736x/88/2a/10/882a1009167623c641e745901b2c294f.jpg',
+										available: true,
+										quantity: 22,
+										postage: 1.95
+p15 = Product.create name: 'Pair glasses',
+										description: 'Two for one glasses',
+										price: 7.95,
+										list_price: 49.95,
+										image: 'http://thatssofetch.typepad.com/.a/6a0120a5691bb9970b0120a8dfbcdf970b-pi',
+										available: true,
+										quantity: 22,
+										postage: 1.95
+p16 = Product.create name: 'Pug mug',
+										description: 'Pug mug',
+										price: 3.95,
+										list_price: 9.95,
+										image: 'http://productshots0.modcloth.net/productshots/0137/4983/cbf61e07b77ffaa133ca94052598edf5.jpg?1389133543',
+										available: true,
+										quantity: 22,
+										postage: 3.95
+p17 = Product.create name: 'Mushroom cushion',
+										description: 'Mushroom cushion',
+										price: 14.95,
+										list_price: 29.95,
+										image: 'http://blog.modcloth.com/wp-content/uploads/2007/10/wintononmushroom.jpg',
+										available: true,
+										quantity: 22,
+										postage: 9.95
+p18 = Product.create name: 'Book ends',
+										description: 'Pug book ends',
+										price: 10.95,
+										list_price: 29.95,
+										image: 'http://productshots2.modcloth.net/productshots/0054/3779/b35694ba4260622d2508b27429c1ec42.jpg?1292950783',
+										available: true,
+										quantity: 22,
+										postage: 7.95
+p19 = Product.create name: 'Renaissance costume',
+										description: 'Majestic Renaissance pug costume',
+										price: 19.95,
+										list_price: 39.95,
+										image: 'http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr03/20/12/enhanced-buzz-9890-1382285551-13.jpg',
+										available: true,
+										quantity: 22,
+										postage: 3.95
+p20 = Product.create name: 'Bjork costume',
+										description: '2001 Bjork Swan Dress Pug',
+										price: 14.95,
+										list_price: 34.95,
+										image: 'http://i.imgur.com/mahxpwa.jpg',
+										available: true,
+										quantity: 22,
+										postage: 3.95
+p21 = Product.create name: 'Dr Who costume',
+										description: 'Dr Who pug costume',
+										price: 9.95,
+										list_price: 19.95,
+										image: 'http://lancmaltby.tumblr.com/image/63842071057',
+										available: true,
+										quantity: 22,
+										postage: 3.95
+p22 = Product.create name: 'Pugtato costume',
+										description: 'Baked pugtato costume',
+										price: 9.95,
+										list_price: 19.95,
+										image: 'http://i.imgur.com/MaEzp9J.jpg',
+										available: true,
+										quantity: 22,
+										postage: 3.95
+p23 = Product.create name: 'Eagle costume',
+										description: 'Eagle pug costume',
+										price: 9.95,
+										list_price: 19.95,
+										image: 'http://pugstumes.tumblr.com/image/63567254790',
+										available: true,
+										quantity: 22,
+										postage: 3.95
+p24 = Product.create name: 'Latte costume',
+										description: 'Pugkin spice latte costume',
+										price: 9.95,
+										list_price: 19.95,
+										image: 'http://i.imgur.com/ScHxezM.jpg',
+										available: true,
+										quantity: 22,
+										postage: 3.95
+										
 
-c1.products << p1 << p2
+c1.products << p1 << p2 << p12
 c2.products << p5
 c3.products << p3 << p4
 c4.products << p6 << p7
-c5.products << p8 << p9 << p10 << p11
+c5.products << p8 << p9 << p10 << p11 << p13 << p14 << p15 << p16 << p17 << p18 << p19 << p20 << p21 << p22 << p23 << p24
 
 Alsobought.destroy_all
 ab1 = Alsobought.create product: p1, alsogot: p2
@@ -158,7 +263,7 @@ b2 = Buyer.create name: 'T-Dizzle',
 									state: 'NSW',
 									post_code: '3000',
 									country: 'Australia'
-b3 = Buyer.create name: 'Kylie',
+b3 = Buyer.create name: 'Kylie-0',
 									email: 'kylie@gmail.com',
 									password: 'chicken',
 									address: '56 york st',
