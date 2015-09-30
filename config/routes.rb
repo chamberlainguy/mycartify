@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   post '/addtocart/:id' => 'products#addtocart' , as: :addtocart
 
+  get '/search' => 'products#search'
+
 end

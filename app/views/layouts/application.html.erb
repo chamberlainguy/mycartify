@@ -17,6 +17,8 @@
       <ul class="nav navbar-nav">
         <li class="<%= active_class(root_path) %>"><a href="/">Home</a></li>
 
+        <li><%= link_to "Search", search_path %></li>
+
         <li class="dropdown">
             <a href="<%= products_path %>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -40,10 +42,10 @@
 </nav>
 
 <!-- EDIT LATER -->
-<div class="jumbotron">
+<div class="theheader">
   <div class="col-md-10 col-md-offset-1">
-    <h1>Bootstrap header starter jumbotroner templater</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Itaque, distinctio reiciendis, amet illum facilis provident, neque, eveniet pariatur rerum quaerat minus ipsum. Laborum dolore sed nesciunt iste, temporibus facere quaerat.</p>
+    <h2>MyCartify sell's something for everyone.</h2>
+    <p class="lead">We sell worldwide and ship our products within the same day of purchase.</p>
   </div>
 </div><!-- /.container -->
 
@@ -53,6 +55,13 @@
       <%= yield %>
     </div>
   </div>
+</div>
+
+<div id="footer">
+<footer>
+  <hr />
+  <p>myCartify by: Guy, Kylie and Tony</p>
+</footer>
 </div>
 
 </body>

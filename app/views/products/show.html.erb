@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>List price:</strong>
-  <%= number_to_currency(@product.list_price) %>
+  <strike><strong>List price:</strong>
+  <%= number_to_currency(@product.list_price) %></strike>
 </p>
 
 <p>
@@ -46,7 +46,7 @@
 </p>
 
 <br>
-<%= button_to 'Add to Cart', addtocart_path(id: @product), method: :post, class: "btn btn-warning"  %>
+<%= button_to 'Add to Cart', addtocart_path(id: @product), method: :post, class: "btn btn-primary"  %>
 <br>
 
 <% if @product.also_bought.present? %>
@@ -65,5 +65,9 @@
       </div>
 <% end %>
 
+<div class='col-md-12'>
+  <br><br>
+  <h2><%= link_to 'Back', products_path %></h2>
+</div>
 
-<%= link_to 'Back', products_path %>
+
