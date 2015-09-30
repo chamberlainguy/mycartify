@@ -22,7 +22,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @product.image, width: "260" %>
+  <%= image_tag @product.image %>
 </p>
 
 <p>
@@ -49,8 +49,6 @@
 <%= button_to 'Add to Cart', addtocart_path(id: @product), method: :post, class: "btn btn-warning"  %>
 <br>
 
-<!-- <%= link_to 'Edit', edit_product_path(@product) %> -->
-
 <% if @product.also_bought.present? %>
   <h2>Customers who bought <%= @product.name %> also bought:</h2>
 <% end %>
@@ -58,7 +56,7 @@
 <% @product.also_bought.each do |product| %>
       <div class="col-md-3" id="product-tile">
         <p><%= link_to product.name, product %></p>
-        <p><%= image_tag product.image, width: "130" %></p>
+        <p><%= image_tag product.image, height: "130" %></p>
         <p>Qty Available:<%= number_with_delimiter(product.quantity) %></p>
         <p>Sale Price:<%= number_to_currency(product.price) %></p>
         <p><strike>List Price:<%= number_to_currency(product.list_price) %></strike></p>

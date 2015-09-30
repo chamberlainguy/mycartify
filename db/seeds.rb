@@ -12,7 +12,7 @@ c1 = Category.create name: 'Toys'
 c2 = Category.create name: 'Clothing'
 c3 = Category.create name: 'Guns'
 c4 = Category.create name: 'Games'
-c5 = Category.create name: 'Things for your Pug'
+c5 = Category.create name: 'Things For Your Pug'
 
 # SPACED OUT FOR READABILTY WHILST PROJECT BEING WORKED ON
 Product.destroy_all
@@ -44,7 +44,7 @@ p4 = Product.create name: 'Glock .30',
 										description: 'Small, compact, the one. When your mates have to ask "Do they make them for men?"', 
 										price: 725.95, 
 										list_price: 1227.95, 
-										image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRdt88iN2MKNq9OJM-mm4zueWdbj0y0TMHX7nz-ugkYt7P2c4wY8Q', 
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511334/images_jc3aw8.jpg', 
 										available: true, 
 										quantity: 151, 
 										postage: 112.95
@@ -52,7 +52,7 @@ p5 = Product.create name: 'Ted',
 										description: '*insert adult censory here*', 
 										price: 79.95, 
 										list_price: 99.95, 
-										image: 'http://i.ebayimg.com/00/s/ODAwWDgwMA==/z/EZYAAOSwBLlVS38J/$_57.JPG', 
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511335/_57_llihn6.jpg', 
 										available: true, 
 										quantity: 1, 
 										postage: 24.95
@@ -60,7 +60,7 @@ p6 = Product.create name: 'PlayStation 4',
 										description: 'Be, superior to king of the world...', 
 										price: 199.95, 
 										list_price: 399.95, 
-										image: 'http://assets.console-deals.com/images/content/ps4-console.png', 
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511448/ps4-console_ans6hw.png', 
 										available: true, 
 										quantity: 755, 
 										postage: 112.95
@@ -68,7 +68,7 @@ p7 = Product.create name: 'Alienware M17x R3',
 										description: 'When on le move',
 										price: 499.95,
 										list_price: 1899.95,
-										image: 'http://www.techomag.com/wp-content/uploads/2011/10/alienware2.jpg',
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511335/alienware2_kxuq4b.jpg',
 										available: true,
 										quantity: 22,
 										postage: 112.95
@@ -76,7 +76,7 @@ p8 = Product.create name: 'Ballerina Outfit',
 										description: 'For when your pug just gotta dance',
 										price: 49.95,
 										list_price: 189.95,
-										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug3-600x600.jpg',
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511335/pug3-600x600_qilzuh.jpg',
 										available: true,
 										quantity: 221,
 										postage: 12.95
@@ -84,7 +84,7 @@ p9 = Product.create name: 'Overalls',
 										description: 'For when your pug just gotta look casual',
 										price: 4.95,
 										list_price: 18.95,
-										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug1-600x800.jpg',
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511336/pug1-600x800_djktgi.jpg',
 										available: true,
 										quantity: 22,
 										postage: 1.95
@@ -92,7 +92,7 @@ p10 = Product.create name: 'Tuxedo',
 										description: 'For when your pug gotta go to a wedding',
 										price: 4.95,
 										list_price: 18.95,
-										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug2-600x599.jpg',
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511336/pug2-600x599_yeytz8.jpg',
 										available: true,
 										quantity: 22,
 										postage: 1.95
@@ -100,7 +100,7 @@ p11 = Product.create name: 'Pirate outfit',
 										description: 'For your pirate pug',
 										price: 4.95,
 										list_price: 18.95,
-										image: 'http://barkpost.com/wp-content/uploads/2013/06/pug5-600x851.jpg',
+										image: 'http://res.cloudinary.com/dxbuftuta/image/upload/v1443511336/pug5-600x851_xrlrbl.jpg',
 										available: true,
 										quantity: 22,
 										postage: 1.95

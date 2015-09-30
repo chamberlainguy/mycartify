@@ -7,7 +7,7 @@
     <% @products.each do |product| %>
       <div class="col-md-3" id="product-tile">
         <p><%= link_to product.name, product %></p>
-        <p><%= image_tag product.image, height: "130" %></p>
+        <p><%= image_tag product.image, height: "160" %></p>
         <p>Qty Available: <%= number_with_delimiter(product.quantity) %></p>
         <p>Sale Price: <%= number_to_currency(product.price) %></p>
         <p><strike>List Price: <%= number_to_currency(product.list_price) %></strike></p>
