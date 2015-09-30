@@ -17,6 +17,12 @@ body {
   padding-top: 50px;
 }
 
+#notice {
+  font-size: 21px;
+  font-weight: 400;
+  color: red;
+}
+
 label {
   display: inline-block;
   max-width: 100%;
@@ -31,14 +37,14 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   margin: 20px 0px 18px 0px;
 }
 
-.jumbotron {
+.theheader {
   margin: 1px 0px 15px 0px;
   text-align: center;
-  background-image: url(http://res.cloudinary.com/dxbuftuta/image/upload/c_scale,w_1200/v1443498611/jumbotronbackground_y0wrfv.jpg);
+  /*background-image: url(http://res.cloudinary.com/dxbuftuta/image/upload/c_scale,w_1200/v1443498611/jumbotronbackground_y0wrfv.jpg);
   background-position: 130px 1px;
   color: white;
   text-shadow: black 0.6em 0.6em 0.6em;
-  padding: 30px 0px 330px 0px;
+  padding: 30px 0px 330px 0px;*/
 }
 
 .jumbotron p {
@@ -74,3 +80,9 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   padding: 10px 0px 0px 10px;
   background-color: whitesmoke;
 }
+
+th,
+td {
+  padding: 10px 15px;
+}
+
