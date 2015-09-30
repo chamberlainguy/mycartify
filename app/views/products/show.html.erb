@@ -21,15 +21,15 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @product.image %>
+  <!-- <strong>Image:</strong> -->
+  <%= image_tag @product.image, width: 400 %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Available:</strong>
   <%= @product.available %>
 </p>
-
+ -->
 <p>
   <strong>Quantity Available:</strong>
   <%= number_with_delimiter(@product.quantity) %>
