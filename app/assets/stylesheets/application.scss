@@ -12,9 +12,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 body {
   padding-top: 50px;
+  font-family: 'PT Sans';
 }
 
 label {
@@ -22,6 +24,11 @@ label {
   max-width: 100%;
   margin: 10px 0px 2px 0px;
   font-weight: bold;
+  font-family: 'PT Sans';
+  font-size: 17px;
+  font-weight: 700;
+  padding: 13px 25px;
+  colour: #494940;
 }
 
 // Button on edit pagee! (Actual file too hard to locate)
@@ -29,6 +36,19 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
   margin: 20px 0px 18px 0px;
+}
+
+.header4 #header-top {
+  border-top:3px solid #ff7579;
+  height:33px;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+  font-family: 'PT Sans';
+  font-size: 17px;
+  font-weight: 700;
+  padding: 13px 25px;
+  colour: #494940;
 }
 
 .jumbotron {
