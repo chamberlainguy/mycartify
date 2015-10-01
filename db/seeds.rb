@@ -245,7 +245,7 @@ ab19 = Alsobought.create product: p11, alsogot: p10
 
 
 Buyer.destroy_all
-b1 = Buyer.create name: 'Guy McFly',
+b1 = Buyer.create name: 'Guy',
 									email: 'guy@gmail.com',
 									password: 'chicken',
 									address: '56 york st',
