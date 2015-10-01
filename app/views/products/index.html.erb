@@ -3,6 +3,9 @@
 <h2 class="heading"><%= @search_desc %></h2>
 
 <div class="container">
+  <% if @paginate %>
+    <%= paginate(@products) %>
+  <% end %>
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-md-3" id="product-tile">
@@ -16,4 +19,7 @@
       </div>
     <% end %>
   </div>
+  <% if @paginate %>
+    <%= paginate(@products) %>
+  <% end %>
 </div>

@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    @paginate = false
     if params[:cat_id].present?
     
       # Read by this category id
@@ -30,8 +31,9 @@ class ProductsController < ApplicationController
       @products = @products.uniq         # The coolest statement yet!!
       @search_desc = "Search results"
     else 
-      @products = Product.all
+      @products = Product.all.page(params[:page]).per(12)
       @search_desc = "Showing all products"
+      @paginate = true
     end
   end
 
