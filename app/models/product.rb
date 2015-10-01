@@ -19,6 +19,9 @@
 class Product < ActiveRecord::Base
 
 	has_many :lineitems
+
+  has_many :orderlines
+
 	belongs_to :category
 
 	has_many :relations_to, 

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
   root :to => 'products#index'
-  
+
+  resources :orderlines
+  resources :orders
   resources :alsoboughts
   resources :lineitems
   resources :carts

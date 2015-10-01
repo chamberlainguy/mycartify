@@ -41,7 +41,9 @@ Cart Total Amount :<%= number_to_currency(@current_buyer.cart_total_amount) %>
 
 <br>
 
+<% if @current_buyer.cart_total_amount > 0 %>
 <td><%= button_to 'Pay Now', new_charge_path, method: :get, class: "btn btn-primary" %></td>
+<% end %>
 
 
 

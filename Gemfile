@@ -41,7 +41,7 @@ gem 'geocoder'	# Google Eathifier
 
 gem 'cloudinary'	# Come on...
 
-gem 'font-awesome-rails'
+# gem 'font-awesome-rails'
 
 group :development do
   gem 'meta_request'		# Tony's 'special' Chrome Extension/Plug-In

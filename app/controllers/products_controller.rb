@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @paginate = false
+    
     if params[:cat_id].present?
     
       # Read by this category id
@@ -31,10 +31,17 @@ class ProductsController < ApplicationController
       @products = @products.uniq         # The coolest statement yet!!
       @search_desc = "Search results"
     else 
-      @products = Product.all.page(params[:page]).per(12)
+      @products = Product.all
       @search_desc = "Showing all products"
-      @paginate = true
     end
+
+    # Setup the pagination voodoo
+    if @products.kind_of?(Array)
+      @products = Kaminari.paginate_array(@products).page(params[:page]).per(12)
+    else
+      @products = @products.page(params[:page]).per(12)
+    end
+
   end
 
   # GET /products/1

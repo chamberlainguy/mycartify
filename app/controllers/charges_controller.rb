@@ -37,6 +37,27 @@ def create
 		end
 	end	
 
+	# Create the order and orderlines
+	o = Order.new
+	o.name = @current_buyer.name
+	o.email = @current_buyer.email
+	o.address = @current_buyer.address
+	o.suburb = @current_buyer.suburb
+	o.state = @current_buyer.state
+	o.post_code = @current_buyer.post_code
+	o.country = @current_buyer.country
+	o.buyer = @current_buyer
+	o.save
+	@current_buyer.lineitems.each do |li|
+		oi = Orderline.new
+		oi.product_name = li.product.name
+		oi.quantity = li.quantity
+		oi.total_price = li.quantity * li.product.price
+		oi.product = li.product
+		oi.order = o
+		oi.save
+	end
+
 	# Now we must get rid of the cart since the payement is done
 	@current_buyer.cart.destroy
 

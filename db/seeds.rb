@@ -245,7 +245,7 @@ ab19 = Alsobought.create product: p11, alsogot: p10
 
 
 Buyer.destroy_all
-b1 = Buyer.create name: 'Guy McFly',
+b1 = Buyer.create name: 'Guy',
 									email: 'guy@gmail.com',
 									password: 'chicken',
 									address: '56 york st',
@@ -273,6 +273,27 @@ b3 = Buyer.create name: 'Kylie-0',
 									post_code: '2001',
 									country: 'Australia'
 
+b4 = Buyer.create name: 'Admin',
+									email: 'admin@gmail.com',
+									password: 'chicken',
+									address: '56 york st',
+									suburb: 'Surry Hills',
+									city: 'Sydney',
+									state: 'NSW',
+									post_code: '2001',
+									country: 'Australia',
+									admin: true
+
+
 Cart.destroy_all
 
 Lineitem.destroy_all
+
+Order.destroy_all
+
+Orderline.destroy_all
+
+
+
+
+
