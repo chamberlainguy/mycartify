@@ -25,6 +25,16 @@ body {
   color: grey;
 }
 
+/*Used for styling icon nav bar*/
+#header-top > div > div > div > div.theheader > div {
+  margin: 40px;
+}
+
+/*used for styling dropdown navigation bar*/
+body .navbar.navbar-inverse.navbar-fixed-top {
+  margin: 32px 0;
+}
+
 label {
   display: inline-block;
   max-width: 100%;
@@ -37,7 +47,7 @@ label {
   colour: #494940;
 }
 
-// Button on edit pagee! (Actual file too hard to locate)
+/*Button on edit pagee! (Actual file too hard to locate)*/
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
@@ -89,7 +99,6 @@ div.icon-bar a {
   margin: 60px;
 }
 
-
 .theheader {
   margin: 1px 0px 15px 0px;
   text-align: center;
@@ -98,6 +107,10 @@ div.icon-bar a {
   color: white;
   text-shadow: black 0.6em 0.6em 0.6em;
   padding: 30px 0px 330px 0px;*/
+}
+
+p.lead {
+  text-shadow: grey 0.2em 0.2em 0.2em;
 }
 
 .jumbotron p {
