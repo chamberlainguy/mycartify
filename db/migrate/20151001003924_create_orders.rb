@@ -1,17 +1,15 @@
-class CreateBuyers < ActiveRecord::Migration
+class CreateOrders < ActiveRecord::Migration
   def change
-    create_table :buyers do |t|
+    create_table :orders do |t|
       t.string :name
       t.string :email
-      t.string :password_digest
       t.string :address
       t.string :suburb
-      t.string :city
       t.string :state
       t.string :post_code
       t.string :country
-
-      t.boolean :admin
+      t.date :shipped
+      t.integer :buyer_id
 
       t.timestamps null: false
     end

@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order.address %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @order.suburb %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @order.state %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @order.post_code %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @order.country %>
+</p>
+
+<p>
+  <strong>Shipped:</strong>
+  <%= @order.shipped %>
+</p>
+
+<p>
+  <strong>Buyer:</strong>
+  <%= @order.buyer_id %>
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Product name</th>
+      <th>Quantity</th>
+      <th>Total price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% order_total = 0 %>
+    <% @order.orderlines.each do |orderline| %>
+      <tr>
+        <td><%= orderline.product_name %></td>
+        <td><%= orderline.quantity %></td>
+        <td><%= number_to_currency(orderline.total_price) %></td>
+        <% order_total += orderline.total_price %>      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>Order total amount is: <%= number_to_currency(order_total) %> </p>
+
+<br>
+
+
+<%= link_to 'Back', orders_path %>

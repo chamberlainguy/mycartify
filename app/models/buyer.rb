@@ -24,6 +24,8 @@ class Buyer < ActiveRecord::Base
 
     has_many :lineitems, :through => :cart
 
+    has_many :orders
+
   	validates :name, :presence => true, :uniqueness => true, :length => { :minimum => 3 }
 	validates :email, :presence => true, :uniqueness => true
 	validates :address, :presence => true
