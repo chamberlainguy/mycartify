@@ -13,7 +13,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 body {
   padding-top: 0px;
   font-family: 'PT Sans';
@@ -23,16 +22,6 @@ body {
   font-size: 21px;
   font-weight: 400;
   color: grey;
-}
-
-/*Used for styling icon nav bar*/
-#header-top > div > div > div > div.theheader > div {
-  margin: 40px;
-}
-
-/*used for styling dropdown navigation bar*/
-body .navbar.navbar-inverse.navbar-fixed-top {
-  margin: 32px 0;
 }
 
 label {
@@ -47,14 +36,20 @@ label {
   colour: #494940;
 }
 
-/*Button on edit pagee! (Actual file too hard to locate)*/
+// Button on edit page! (Actual file too hard to locate)
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
   margin: 20px 0px 18px 0px;
 }
 
-//Used for General Styling of the icon bar
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #090909;
+  border-radius: 15px;
+}
+
+// Used for General Styling of the icon bar
 .social-list{
   float: right;
   width: 100%;
@@ -62,17 +57,16 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   display: inline;
 }
 
-li{
+li {
   list-style: none;
   display: inline;
 }
 
 .social-list ul li{
   background: red;
-
 }
 
-div.icon-bar{
+div.icon-bar {
   background-color: #fff;
   width: 100%;
   border-bottom: 1px solid #f0f0f0;
@@ -90,6 +84,7 @@ div.icon-bar a {
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 
 .navbar.navbar-inverse.navbar-fixed-top {
   font-family: 'PT Sans';
@@ -101,29 +96,52 @@ div.icon-bar a {
 }
 
 
+=======
+>>>>>>> c46cac6fed5a0741cf1d5f8e225e5745cf137d98
 .theheader {
   margin: 1px 0px 15px 0px;
   text-align: center;
-  /*background-image: url(http://res.cloudinary.com/dxbuftuta/image/upload/c_scale,w_1200/v1443498611/jumbotronbackground_y0wrfv.jpg);
-  background-position: 130px 1px;
-  color: white;
-  text-shadow: black 0.6em 0.6em 0.6em;
-  padding: 30px 0px 330px 0px;*/
 }
 
-p.lead {
-  text-shadow: grey 0.2em 0.2em 0.2em;
+.navbar-inverse {
+  background-color: rgba(0,0,0,0);
 }
 
-.jumbotron p {
-  padding: 20px 0px 0px 0px;
-  font-size: 21px;
-  font-weight: 400;
-  text-shadow: black 0.3em 0.3em 0.3em;
+.navbar-fixed-top {
+  background-color: rgba(255,255,255,0.9);
+  top: 0;
+  border-width: 0 0 0px;
 }
+
+.navbar-inverse .navbar-brand {
+  color: black;
+} 
 
 .lead {
-  text-shadow: black 0.6em 0.6em 0.6em;
+  font-size: 18px;
+  margin-top: 80px;
+  text-shadow: 1px 1px 10px;
+  font-size: 21px;
+  text-align: center;
+  -webkit-animation: fadein 2.5s;
+}
+
+.logo {
+  text-shadow: 1px 1px 15px;
+  -webkit-animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.doge {
+  color: grey;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: black;
 }
 
 .heading {
@@ -135,22 +153,20 @@ p.lead {
   text-align: center;
 }
 
-.logo {
-	background-color: white;
-	margin-top: -16px;
-}
-
 #product-tile {
 	display: inline-block;
-  height: 360px;
-  width: 33%;
-  margin: 10px 1.9px -7px 2px;
-  padding: 10px 0px 0px 10px;
   background-color: whitesmoke;
+  height: 360px;
+  width: 32%;
+  margin: 12px 1.9px -7px 5px;
+  padding: 10px 0px 0px 10px;
 }
 
-th,
-td {
+#product-tile:hover {
+  background-color: white;
+}
+
+th, td {
   padding: 10px 15px;
 }
 

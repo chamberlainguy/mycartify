@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mycartify</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>myCartify</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -11,12 +11,11 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a href="/" class="navbar-brand">myCartify</a>
+      <a href="/" class="navbar-brand"><span class="logo">myCartify</span></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="<%= active_class(root_path) %>"><a href="/">Home</a></li>
-
         <li class="<%= active_class(search_path) %>"><%= link_to "Search", search_path %></li>
 
         <li class="dropdown">
@@ -52,6 +51,8 @@
   </div>
 </div><!-- /.container -->
 
+<div class="yeah"></div>
+
 <div class="container">
   <div class="row">
     <div class="col-md-10">
@@ -61,10 +62,10 @@
 </div>
 
 <div id="footer">
-<footer>
-  <hr />
-  <p>myCartify was created by Guy Chamberlain, Kylie O'Brien-Pratt and Tony Gagliardi</p>
-</footer>
+  <footer>
+    <hr />
+    <p>myCartify was created by Guy Chamberlain, Kylie O'Brien-Pratt and <a href="https://media.giphy.com/media/ScZzMlETdv9mg/giphy.gif" class="doge">T-Dizzle-Dazzle-Dawwwg</p>
+  </footer>
 </div>
 
 </body>
