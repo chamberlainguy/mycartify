@@ -22,7 +22,7 @@ def create
 	# 	:currency			=> 'AUD'
 	# )
 
-	# Record the Also Boughts eg. He who bought A also bought B
+	# Record the "Also Boughts" eg. He who bought A also bought B
 	@current_buyer.lineitems.each do |i|
 		p1 = i.product
 		@current_buyer.lineitems.each do |j|
@@ -58,7 +58,7 @@ def create
 		oi.save
 	end
 
-	# Now we must get rid of the cart since the payement is done
+	# Now we must get rid of the cart since the payment is done
 	@current_buyer.cart.destroy
 
 rescue Stripe::CardError => e
