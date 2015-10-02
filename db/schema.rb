@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20151001003947) do
     t.string   "state"
     t.string   "post_code"
     t.string   "country"
+    t.boolean  "admin"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
