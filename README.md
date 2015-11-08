@@ -1,4 +1,4 @@
-** MyCartify
+##### MyCartify
 
 MyCartify is a group project completed as part of the General Assembly Sydney Web Development Immersive program in September 2015. The project was created by Kylie O'Brien-Pratt, Guy Chamberlain and Tony Gagliardi.
 
